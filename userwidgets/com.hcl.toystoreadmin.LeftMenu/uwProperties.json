@@ -1,0 +1,62 @@
+{
+    "classname": "LeftMenu",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "b30018bf873e4187a7bd6eb46920a4f6",
+                    "paramList": [],
+                    "propertyKey": "selectStrategies",
+                    "pw": {
+                        "displayName": "selectStrategies",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "fe302715efb44cdfb4885b7a7525c83b",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "b97b8f6c927c40c6a2dc7b234d878e88",
+                    "paramList": [
+                        {
+                            "name": "item"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onSelect",
+                    "pw": {
+                        "displayName": "onSelect",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "fe302715efb44cdfb4885b7a7525c83b",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hcl.toystoreadmin",
+    "version": "1.0.0"
+}

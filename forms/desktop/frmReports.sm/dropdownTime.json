@@ -1,0 +1,100 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "460dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sc6b51d062fb427ca4e1dc7a8296af8f",
+    "_top_": {
+        "type": "string",
+        "value": "25dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "250dp"
+    },
+    "canUpdateUI": true,
+    "containerweight": 0,
+    "data": {
+        "options": {
+            "data": [
+                {
+                    "option": "YTD",
+                    "selected": ""
+                },
+                {
+                    "option": "Current Year Q3",
+                    "selected": "true"
+                },
+                {
+                    "option": "Current Year Q2",
+                    "selected": ""
+                },
+                {
+                    "option": "Current Year Q1",
+                    "selected": ""
+                },
+                {
+                    "option": "Last Year Q4",
+                    "selected": ""
+                }
+            ],
+            "schema": [
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "Selected",
+                    "columnHeaderType": "text",
+                    "columnID": "selected",
+                    "columnText": "Not Defined",
+                    "columnType": "text",
+                    "kuid": "j1630cb5cf5c4d649a60472018566675"
+                },
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "Option",
+                    "columnHeaderType": "text",
+                    "columnID": "option",
+                    "columnText": "Not Defined",
+                    "columnType": "text",
+                    "kuid": "d3c43b0c024b4de4bfccda3025dc9155"
+                }
+            ]
+        },
+        "selection": "Current Year Q3"
+    },
+    "id": "dropdownTime",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "df93e7de69d7494aac9b05f02ad1a861",
+    "masterType": 1,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxContent",
+    "pf": "frmReports",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "sourceUserWidget": "c3f0037effe047468b702445205ee2ac",
+    "wType": "UserWidgetInstance",
+    "zindex": 10
+}

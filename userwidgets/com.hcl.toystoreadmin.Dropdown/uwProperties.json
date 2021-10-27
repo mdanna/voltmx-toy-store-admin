@@ -1,0 +1,114 @@
+{
+    "classname": "Dropdown",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "j2029e39ef12435092697c9f9681a0e5",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onOptionSelected",
+                    "pw": {
+                        "displayName": "onOptionSelected",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c3f0037effe047468b702445205ee2ac",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": {
+                        "data": [
+                            {
+                                "option": "One",
+                                "selected": "true"
+                            },
+                            {
+                                "option": "Two",
+                                "selected": ""
+                            }
+                        ],
+                        "schema": [
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "Selected",
+                                "columnHeaderType": "text",
+                                "columnID": "selected",
+                                "columnText": "Not Defined",
+                                "columnType": "text",
+                                "kuid": "j1630cb5cf5c4d649a60472018566675"
+                            },
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "Option",
+                                "columnHeaderType": "text",
+                                "columnID": "option",
+                                "columnText": "Not Defined",
+                                "columnType": "text",
+                                "kuid": "d3c43b0c024b4de4bfccda3025dc9155"
+                            }
+                        ]
+                    },
+                    "group": "General",
+                    "kuid": "cc73c49fb5b945669cf8432e85824ae8",
+                    "originalPropertyKey": "options",
+                    "propertyIndex": 1,
+                    "propertyKey": "options",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "options",
+                        "uiRepresentation": "Label-DataGrid"
+                    },
+                    "srcWgtKUID": "c3f0037effe047468b702445205ee2ac",
+                    "type": "data grid",
+                    "value": 2
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "hd54aea22e5141929d135002a0f18047",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 2,
+                    "propertyKey": "selection",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "selection",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblSelection",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "a045a291b18343debfd14e4e015fceb2"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hcl.toystoreadmin",
+    "version": "1.0.0"
+}

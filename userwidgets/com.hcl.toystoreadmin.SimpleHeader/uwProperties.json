@@ -1,0 +1,44 @@
+{
+    "classname": "SimpleHeader",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "bb8851b214b54391ae9d9510e32290b1",
+                    "paramList": [],
+                    "propertyKey": "setUser",
+                    "pw": {
+                        "displayName": "setUser",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e4dd4f06ee964907a97c0af0cdb7df16",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hcl.toystoreadmin",
+    "version": "1.0.0"
+}
