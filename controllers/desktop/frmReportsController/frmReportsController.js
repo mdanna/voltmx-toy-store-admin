@@ -2,7 +2,7 @@ define({
 
   onViewCreated() {
     this.view.init = () => {
-      
+
       this.view.flxSalesProductList.removeAll();
       this.view.flxStrategiesProductList.removeAll();
       appData.products.forEach((product, index) => {
@@ -30,7 +30,7 @@ define({
         strategiesProduct.hoverEnabled = 'yes';
         this.view.flxStrategiesProductList.add(strategiesProduct);
       });
-      
+
       mEventManager.subscribe(appData.EVENT_PRODUCT_SELECTION, (szIndex) => {
         if(!this.view.flxStrategies.isVisible){
           this.view.cmpLeftMenu.selectStrategies();
@@ -52,12 +52,16 @@ define({
             this.view.flxSalesReport.isVisible = true;
             this.view.flxTrafficAnalysis.isVisible = false;
             this.view.flxStrategies.isVisible = false;
+            //refresh the images
+            this.view.dropdownTime.onOptionSelected(this.view.dropdownTime.selection);
             break;
           case 'TRAFFIC_ANALYSIS':
             this.view.lblTitle.text = 'Traffic Analysis';
             this.view.flxSalesReport.isVisible = false;
             this.view.flxTrafficAnalysis.isVisible = true;
             this.view.flxStrategies.isVisible = false;
+            //refresh the images
+            this.view.dropdownStore.onOptionSelected(this.view.dropdownStore.selection);
             break;
           case 'STRATEGIES':
             this.view.lblTitle.text = 'Strategies';
@@ -82,6 +86,7 @@ define({
         new voltmx.mvc.Navigation('frmLogin').navigate();
       };
 
+      /*
       this.view.dropdownTime.onOptionSelected = (option) => {
         switch(option){
           case 'Current Year Q1':
@@ -109,6 +114,53 @@ define({
             this.view.imgTraffic.src = 'traffic_analysis_02_map_all.png';
             break;
         }
+      };
+      
+      */
+      
+      this.view.dropdownTime.onOptionSelected = (option) => {
+        this.view.flxGraphImage.removeAll();
+        this.view.flxGraphImage.add(new kony.ui.Image2({
+          id: 'imgGraph',
+          top: '5%',
+          width: '100%',
+          height: '90%',
+          src: (option === 'Current Year Q1' || option === 'Current Year Q3') ? 'sales_report_01_graph.png' : 'sales_report_02_graph.png'
+        }));
+        this.view.flxTrendsImage.removeAll();
+        this.view.flxTrendsImage.add(new kony.ui.Image2({
+          id: 'imgTrends',
+          top: '5%',
+          width: '100%',
+          height: '90%',
+          src: (option === 'Current Year Q1' || option === 'Current Year Q3') ? 'sales_report_01_trends.png' : 'sales_report_02_trends.png'
+        }));
+      };
+      
+      this.view.dropdownStore.onOptionSelected = (option) => {
+        this.view.flxImgTrafficChange.removeAll();
+        this.view.flxImgTrafficChange.add(new kony.ui.Image2({
+          id: 'imgTrafficChange',
+          top: '5%',
+          width: '100%',
+          height: '90%',
+          src: (option === 'Store #1234, Austin, TX') ? 'traffic_analysis_01_pie_chart.png' : 'traffic_analysis_02_pie_chart.png'
+        }));
+        this.view.flxImgTrafficAisle.removeAll();
+        this.view.flxImgTrafficAisle.add(new kony.ui.Image2({
+          id: 'imgTrafficAisle',
+          top: '5%',
+          width: '100%',
+          height: '90%',
+          src: (option === 'Store #1234, Austin, TX') ? 'traffic_analysis_01_bar_chart.png' : 'traffic_analysis_02_bar_chart.png'
+        }));
+        this.view.flxTrafficImage.removeAll();
+        this.view.flxTrafficImage.add(new kony.ui.Image2({
+          id: 'imgTraffic',
+          width: '100%',
+          height: '100%',
+          src: (option === 'Store #1234, Austin, TX') ? 'traffic_analysis_01_map_all.png' : 'traffic_analysis_02_map_all.png'
+        }));
       };
     };
 
